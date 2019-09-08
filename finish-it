@@ -1,0 +1,6 @@
+adduser -uid 1000 pi
+echo "deb http://download.virtualbox.org/virtualbox/debian stretch contrib" | tee /etc/apt/sources.list.d/virtualbox.list
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | apt-key add -
+apt install wget curl git
+echo "To install programs, type Rpi686-root, to run programs, type Rpi686"
+logout
