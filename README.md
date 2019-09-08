@@ -1,3 +1,3 @@
-Rpi686 2.0 BETA
+Rpi686 2.0 
 
-This version will include pi386, and fixed bugs.
+Almost done! Will include the ability to download Virtualbox right out of the box.
