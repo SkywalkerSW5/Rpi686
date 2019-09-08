@@ -12,7 +12,5 @@ sudo cp /usr/bin/qemu-i386-static ./pi686/usr/bin/
 echo "Half way there!"
 sudo chroot ./pi686/ /debootstrap/debootstrap --second-stage
 echo "Almost done! Just follow the rest of the instructions."
-echo "Enter 'adduser -uid 1000 pi' in the terminal, enter your name, etc. After that, type logout."
-echo "Type 'sudo chmod +x setup2.sh && sudo ./setup2.sh' "
-
+echo "Enter 'adduser -uid 1000 pi' in the terminal, enter your name, etc. After that, type logout, and type in Rpi686"
 
