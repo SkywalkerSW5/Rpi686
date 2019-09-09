@@ -1,4 +1,4 @@
-Rpi686 3.0 BETA 1
+# Rpi686 3.0 BETA 1
 
 In this BETA:
 
