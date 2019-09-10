@@ -1,0 +1,113 @@
+#!/bin/bash
+
+HEIGHT=15
+WIDTH=40
+CHOICE_HEIGHT=4
+BACKTITLE="Rpi686 3.0 BETA 1"
+TITLE="Rpi686-install"
+MENU="Which operating system would you like to install?"
+
+OPTIONS=(1 "Kali Linux"
+         2 "Debian"
+         3 "Ubuntu")
+
+CHOICE=$(dialog --clear \
+                --backtitle "$BACKTITLE" \
+                --title "$TITLE" \
+                --menu "$MENU" \
+                $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                "${OPTIONS[@]}" \
+                2>&1 >/dev/tty)
+
+clear
+case $CHOICE in
+        1)
+            echo "Installing Kali Linux..."
+
+
+
+
+
+
+echo "Rpi686 3.0 Kali Linux Setup"
+echo "Note: This may take a while, so get some popcorn."
+echo "Copying Rpi686 to /usr/bin"
+echo "Installing Qemu and Debootstrap"
+sudo apt-get install qemu p7zip-full qemu-user-static binfmt-support debootstrap
+sudo debootstrap --foreign --arch amd64 kali-rolling /home/pi/kali-rpi686 http://http.kali.org/kali/
+echo "Mounting"
+sudo mount -t sysfs sys /home/pi/kali-rpi686/sys/
+sudo mount -t proc proc /home/pi/kali-rpi686/proc/
+sudo mount --bind /dev /home/pi/kali-rpi686/dev/
+sudo mount --bind /dev/pts /home/pi/kali-686/dev/pts/
+sudo mount --bind /dev/shm /home/pi/kali-rpi686/dev/shm/
+sudo cp /usr/bin/qemu-i386-static /home/pi/kali-rpi686/usr/bin/
+echo "Half way there!"
+sudo cp /home/pi/rpi3/kali/finish-it /home/pi/kali-rpi686/usr/bin/
+sudo chroot /home/pi/kali-rpi686/ /debootstrap/debootstrap --second-stage
+echo "Almost done! Just type in finish-it."
+
+
+            ;;
+        2)
+            echo "Installing Debian..."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+echo "Rpi686 3.0 Debian Setup"
+echo "Note: This may take a while, so get some popcorn."
+echo "Copying Rpi686 to /usr/bin"
+echo "Installing Qemu and Debootstrap"
+sudo apt-get install qemu p7zip-full qemu-user-static binfmt-support debootstra$
+sudo debootstrap --foreign --arch amd64 stretch /home/pi/deb-rpi686 http://ftp.$
+echo "Mounting"
+sudo mount -t sysfs sys /home/pi/deb-rpi686/sys/
+sudo mount -t proc proc /home/pi/deb-rpi686/proc/
+sudo mount --bind /dev /home/pi/deb-rpi686/dev/
+sudo mount --bind /dev/pts /home/pi/deb-rpi686/dev/pts/
+sudo mount --bind /dev/shm /home/pi/deb-rpi686/dev/shm/
+sudo cp /usr/bin/qemu-i386-static /home/pi/deb-rpi686/usr/bin/
+echo "Half way there!"
+sudo cp /home/pi/rpi3/debian/finish-it /home/pi/debian-rpi686/usr/bin
+sudo chroot /home/pi/deb-rpi686/ /debootstrap/debootstrap --second-stage
+echo "Almost done! Just type in finish-it."
+
+            ;;
+        3)
+            echo "Installing Ubuntu..."
+echo "Rpi686 3.0 Ubuntu Setup"
+echo "Note: This may take a while, so get some popcorn."
+echo "Copying Rpi686 to /usr/bin"
+echo "Installing Qemu and Debootstrap"
+sudo apt-get install qemu p7zip-full qemu-user-static binfmt-support debootstrap
+sudo debootstrap --foreign --arch amd64 bionic /home/pi/ubuntu-rpi686 http://us$
+echo "Mounting"
+sudo mount -t sysfs sys /home/pi/ubuntu-rpi686/sys/
+sudo mount -t proc proc /home/pi/ubuntu-rpi686/proc/
+sudo mount --bind /dev /home/pi/ubuntu-rpi686/dev/
+sudo mount --bind /dev/pts /home/pi/ubuntu-rpi686/dev/pts/
+sudo mount --bind /dev/shm /home/pi/ubuntu-rpi686/dev/shm/
+sudo cp /usr/bin/qemu-i386-static /home/pi/ubuntu-rpi686/usr/bin/
+echo "Half way there!"
+sudo cp /home/pi/rpi3/ubuntu/finish-it /home/pi/ubuntu-rpi686/usr/bin/
+sudo chroot /home/pi/ubuntu-rpi686/ /debootstrap/debootstrap --second-stage/
+echo "Almost done! Just type in finish-it."
+
+            ;;
+esac

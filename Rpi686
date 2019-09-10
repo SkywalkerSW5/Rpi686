@@ -1,0 +1,37 @@
+#!/bin/bash
+
+HEIGHT=15
+WIDTH=40
+CHOICE_HEIGHT=4
+BACKTITLE="Rpi686 3.0 BETA 1"
+TITLE="Choose an operating system"
+MENU="Choose one of the following options:"
+
+OPTIONS=(1 "Kali Linux"
+         2 "Debian"
+         3 "Ubuntu")
+
+CHOICE=$(dialog --clear \
+                --backtitle "$BACKTITLE" \
+                --title "$TITLE" \
+                --menu "$MENU" \
+                $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                "${OPTIONS[@]}" \
+                2>&1 >/dev/tty)
+
+clear
+case $CHOICE in
+        1)
+
+echo "Booting into Kali Linux..."
+sudo chroot /home/pi/kali-rpi686/ /bin/su -l pi
+            ;;
+        2)
+            echo "Booting into Debian"
+sudo chroot /home/pi/deb-rpi686/ /bin/su -l pi
+            ;;
+        3)
+            echo "Booting into Ubuntu"
+sudo chroot /home/pi/ubuntu-rpi686/ /bin/su -l pi
+            ;;
+esac
