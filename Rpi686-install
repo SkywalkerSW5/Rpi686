@@ -43,7 +43,7 @@ sudo mount --bind /dev/pts /home/pi/kali-686/dev/pts/
 sudo mount --bind /dev/shm /home/pi/kali-rpi686/dev/shm/
 sudo cp /usr/bin/qemu-i386-static /home/pi/kali-rpi686/usr/bin/
 echo "Half way there!"
-sudo cp /home/pi/rpi3/kali/finish-it /home/pi/kali-rpi686/usr/bin/
+sudo cp /home/pi/Rpi686/kali/finish-it /home/pi/kali-rpi686/usr/bin/
 sudo chroot /home/pi/kali-rpi686/ /debootstrap/debootstrap --second-stage
 echo "Almost done! Just type in finish-it."
 
@@ -84,7 +84,7 @@ sudo mount --bind /dev/pts /home/pi/deb-rpi686/dev/pts/
 sudo mount --bind /dev/shm /home/pi/deb-rpi686/dev/shm/
 sudo cp /usr/bin/qemu-i386-static /home/pi/deb-rpi686/usr/bin/
 echo "Half way there!"
-sudo cp /home/pi/rpi3/debian/finish-it /home/pi/debian-rpi686/usr/bin
+sudo cp /home/pi/Rpi686/debian/finish-it /home/pi/debian-rpi686/usr/bin
 sudo chroot /home/pi/deb-rpi686/ /debootstrap/debootstrap --second-stage
 echo "Almost done! Just type in finish-it."
 
@@ -105,7 +105,7 @@ sudo mount --bind /dev/pts /home/pi/ubuntu-rpi686/dev/pts/
 sudo mount --bind /dev/shm /home/pi/ubuntu-rpi686/dev/shm/
 sudo cp /usr/bin/qemu-i386-static /home/pi/ubuntu-rpi686/usr/bin/
 echo "Half way there!"
-sudo cp /home/pi/rpi3/ubuntu/finish-it /home/pi/ubuntu-rpi686/usr/bin/
+sudo cp /home/pi/Rpi686/ubuntu/finish-it /home/pi/ubuntu-rpi686/usr/bin/
 sudo chroot /home/pi/ubuntu-rpi686/ /debootstrap/debootstrap --second-stage/
 echo "Almost done! Just type in finish-it."
 
