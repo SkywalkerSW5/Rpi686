@@ -39,7 +39,7 @@ echo "Mounting"
 sudo mount -t sysfs sys /home/pi/kali-rpi686/sys/
 sudo mount -t proc proc /home/pi/kali-rpi686/proc/
 sudo mount --bind /dev /home/pi/kali-rpi686/dev/
-sudo mount --bind /dev/pts /home/pi/kali-686/dev/pts/
+sudo mount --bind /dev/pts /home/pi/kali-rpi686/dev/pts/
 sudo mount --bind /dev/shm /home/pi/kali-rpi686/dev/shm/
 sudo cp /usr/bin/qemu-i386-static /home/pi/kali-rpi686/usr/bin/
 echo "Half way there!"
