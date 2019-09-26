@@ -1,6 +1,8 @@
 echo "Rpi686 3.0 Debian Setup"
 echo "Note: This may take a while, so get some popcorn."
 echo "Copying Rpi686 to /usr/bin"
+echo "Updating APT before starting"
+sudo apt-get update
 echo "Installing Qemu and Debootstrap"
 sudo apt-get install qemu p7zip-full qemu-user-static binfmt-support debootstrap binutils
 sudo debootstrap --foreign --arch amd64 stretch /home/pi/deb-rpi686 http://ftp.us.debian.org/debian
