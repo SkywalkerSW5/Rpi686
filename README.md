@@ -1,5 +1,5 @@
 # Rpi686 is discontinued.
-
+## Old readme:
 piRoot is the continuation of Rpi686. Rpi686's newest version is Rpi686 BETA 1. piRoot is based off of the unreleased Beta 2.
 
 If you are using Rpi686, please upgrade to the stable piRoot Beta 1. So far, it has no bugs.
