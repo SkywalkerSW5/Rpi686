@@ -1,0 +1,12 @@
+wget -O - http://deb.opera.com/archive.key | apt-key add - deb http://deb.opera.com/opera/ stable non-free
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
+deb http://ppa.launchpad.net/webupd8team/java/ubuntu bionic main
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D2C19886
+deb http://repository.spotify.com stable non-free
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F24AEA9FB05498B7
+deb [arch=i386] http://repo.steampowered.com/steam/ precise steam
+wget -O - http://deb.opera.com/archive.key | sudo apt-key add -
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D2C19886
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F24AEA9FB05498B7
+adduser pi
