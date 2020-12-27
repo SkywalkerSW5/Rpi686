@@ -27,7 +27,7 @@ sudo chroot /home/pi/kali-rpi686/ /bin/su -l root
             ;;
         2)
             echo "Booting into Debian as root..."
-sudo chroot /home/pi/debian-rpi686/ /bin/su -l root
+sudo chroot /home/pi/deb-rpi686/ /bin/su -l root
             ;;
         3)
             echo "Booting into Ubuntu as root..."
